@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rexy the square-shaped T-Rex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+      #the_canvas_id {
+        width: 100%;
+        height: 100%;
+        display: block;
+        touch-action: none;
+      }
+    </style>
+  <link rel="modulepreload" href="/rust_gui_app-597a06a4cc8ce4d0.js" crossorigin="anonymous" integrity="sha384-FjpZIQox52Sg1oaqPcNOwNJPJAxij7DehrmP2Ild8IZ7TaawUHvmOJFpZc7HHo41"><link rel="preload" href="/rust_gui_app-597a06a4cc8ce4d0_bg.wasm" crossorigin="anonymous" integrity="sha384-0JAXPznA/KzRoWg24Is4vCelx0P5lwBmNFJZ7Z5/GdmQffU+STE0aXGenKbfeyLx" as="fetch" type="application/wasm"></head>
+  <body>
+    <canvas id="the_canvas_id"></canvas>
+    <script type="module">
+      import init from './rust_gui_app.js';
+      init();
+    </script>
+  
+<script type="module">
+import init, * as bindings from '/rust_gui_app-597a06a4cc8ce4d0.js';
+const wasm = await init({ module_or_path: '/rust_gui_app-597a06a4cc8ce4d0_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html> 
