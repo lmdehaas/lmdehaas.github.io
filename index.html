@@ -3,21 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <title>Rexy the square-shaped T-Rex</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <style>
       html, body {
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height for mobile browsers */
         overflow: hidden;
         background: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        -webkit-overflow-scrolling: touch;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior: none;
       }
       #the_canvas_id {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
         display: block;
         touch-action: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overscroll-behavior: none;
       }
     </style>
   <link rel="modulepreload" href="/rust_gui_app-3259a1c29594d9d9.js" crossorigin="anonymous" integrity="sha384-KsFToYvI4KPh5aaMgSQAzwcKHFX7iHcbEjjcZWlG+vU7cxl2wpehPcysQAN8h20F"><link rel="preload" href="/rust_gui_app-3259a1c29594d9d9_bg.wasm" crossorigin="anonymous" integrity="sha384-ePvFjTwpG582C0fA6ui7e1LLu80vBXGCHrhhflU6yy3oYZfkKSpff3zvQYyEiMEV" as="fetch" type="application/wasm"></head>
